@@ -1,0 +1,427 @@
+/* =========================================
+   MASTER CSS - UD MEKAR JAYA
+   ========================================= */
+:root {
+  --primary: #7a29e0;
+  --primary-dark: #6321b6;
+  --secondary: #475569;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: var(--light);
+  color: var(--secondary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- NAVBAR RESPONSIF --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+.logo-container .brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.brand-name {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+nav ul li a:hover {
+  color: var(--primary);
+}
+.btn-about {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600 !important;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  display: flex;
+  padding: 80px 8%;
+  align-items: center;
+  gap: 50px;
+  background: var(--white);
+}
+.hero-content {
+  flex: 1.2;
+}
+.hero-img {
+  flex: 0.8;
+}
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+.badge {
+  background: #f5f3ff;
+  color: var(--primary);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero h1 span {
+  color: var(--primary);
+}
+.hero-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  border: 2px solid var(--primary);
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+}
+.btn-secondary:hover {
+  background: #f5f3ff;
+}
+
+/* --- LAYOUT UMUM (Fitur, Testimoni) --- */
+.features {
+  padding: 80px 8%;
+  text-align: center;
+}
+.features-grid,
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+.feature-card,
+.testi-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-align: left;
+}
+.feature-card:hover,
+.testi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.testi-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  object-fit: cover;
+}
+
+/* --- HALAMAN PEMESANAN --- */
+.order-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 40px 8%;
+  gap: 40px;
+}
+.order-step {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+  border: 1px solid var(--border);
+}
+.order-step h3 {
+  margin-bottom: 20px;
+  color: var(--dark);
+  border-bottom: 2px solid var(--light);
+  padding-bottom: 10px;
+}
+.sidebar-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  position: sticky;
+  top: 100px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122, 41, 224, 0.1);
+}
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Kategori Produk */
+.cat-wrapper {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--light);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--dark);
+}
+.cat-header input {
+  width: auto;
+  margin: 0 15px 0 0;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.cat-body {
+  padding: 20px;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+}
+
+/* Dimensi & Hitungan */
+.dim-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  background: var(--light);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+.dim-group input {
+  width: 80px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.qty-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.qty-group input {
+  width: 100px;
+  margin-bottom: 0;
+}
+
+/* Payment Radio */
+.payment-methods {
+  display: flex;
+  gap: 20px;
+}
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  flex: 1;
+}
+.payment-methods input {
+  width: auto;
+  margin: 0;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 60px 8% 20px;
+  margin-top: 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.footer-grid h3 {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+.footer-grid h4 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: fixed;
+    right: -100%;
+    top: 75px;
+    background: var(--white);
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 75px);
+    padding: 40px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+  }
+  nav ul.active {
+    right: 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .features-grid,
+  .testi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .order-container {
+    grid-template-columns: 1fr;
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid,
+  .testi-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .dim-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

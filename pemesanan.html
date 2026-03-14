@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemesanan - UD MEKAR JAYA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <a href="index.html" class="brand-link">
+          <img src="img/logo.jpeg" alt="Logo UD Mekar Jaya" class="logo-img" />
+          <span class="brand-name">UD MEKAR JAYA</span>
+        </a>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="testimoni.html">Testimoni</a></li>
+        <li><a href="pemesanan.html">Pemesanan</a></li>
+        <li><a href="tentangkami.html" class="btn-about">Tentang Kami</a></li>
+      </ul>
+    </nav>
+
+    <div style="padding: 60px 8% 10px; text-align: center">
+      <span class="badge">SISTEM PEMESANAN</span>
+      <h1 style="font-size: 2.5rem; color: #0f172a; margin-top: 10px">
+        Form Pemesanan Panel
+      </h1>
+      <p style="color: #475569; margin-top: 10px">
+        Lengkapi data diri dan spesifikasi produk di bawah ini untuk mendapatkan
+        estimasi harga.
+      </p>
+    </div>
+
+    <div class="order-container">
+      <div class="order-list">
+        <div class="order-step">
+          <h3>1. Data Pembeli</h3>
+          <div class="input-grid">
+            <input
+              type="text"
+              id="cust-name"
+              placeholder="Nama Lengkap (Teks)"
+              required
+            />
+            <input
+              type="tel"
+              id="cust-phone"
+              placeholder="Nomor Handphone / WA (Angka)"
+              required
+            />
+          </div>
+          <input
+            type="email"
+            id="cust-email"
+            placeholder="Alamat Email Aktif"
+            required
+          />
+          <textarea
+            id="cust-address"
+            style="height: 100px"
+            placeholder="Alamat Pengiriman Lengkap"
+            required
+          ></textarea>
+        </div>
+
+        <div class="order-step">
+          <h3>2. Pilih Kategori Produk</h3>
+
+          <div class="cat-wrapper">
+            <label class="cat-header">
+              <input
+                type="checkbox"
+                class="cat-check"
+                value="Box Panel Listrik"
+                data-target="cat-1"
+              />
+              1. Box Panel Listrik
+            </label>
+            <div id="cat-1" class="cat-body hidden">
+              <select class="prod-type">
+                <option value="Freestanding" data-price="1500000">
+                  Freestanding (Rp 1.500.000)
+                </option>
+                <option value="Panel Control" data-price="800000">
+                  Panel Control (Rp 800.000)
+                </option>
+                <option value="Box Hydrant" data-price="600000">
+                  Box Hydrant (Rp 600.000)
+                </option>
+                <option value="Box Jockey Pump" data-price="500000">
+                  Box Jockey Pump (Rp 500.000)
+                </option>
+              </select>
+              <div class="dim-group">
+                <span style="font-size: 0.9rem; font-weight: 600"
+                  >Dimensi (P x L x T) mm:</span
+                >
+                <div class="dimension-inputs">
+                  <input type="number" class="dim-p" placeholder="P" /> x
+                  <input type="number" class="dim-l" placeholder="L" /> x
+                  <input type="number" class="dim-t" placeholder="T" />
+                </div>
+              </div>
+              <div class="qty-group">
+                <span style="font-size: 0.9rem; font-weight: 600">Jumlah:</span>
+                <input type="number" class="prod-qty" value="1" min="1" />
+              </div>
+              <input
+                type="text"
+                class="prod-note"
+                placeholder="Catatan tambahan (Warna, Plat, dll)"
+              />
+            </div>
+          </div>
+
+          <div class="cat-wrapper">
+            <label class="cat-header">
+              <input
+                type="checkbox"
+                class="cat-check"
+                value="Kabel Tray"
+                data-target="cat-2"
+              />
+              2. Kabel Tray
+            </label>
+            <div id="cat-2" class="cat-body hidden">
+              <div class="dim-group">
+                <span style="font-size: 0.9rem; font-weight: 600"
+                  >Dimensi (P x L x T) mm:</span
+                >
+                <div class="dimension-inputs">
+                  <input type="number" class="dim-p" placeholder="P" /> x
+                  <input type="number" class="dim-l" placeholder="L" /> x
+                  <input type="number" class="dim-t" placeholder="T" />
+                </div>
+              </div>
+              <div class="qty-group">
+                <span style="font-size: 0.9rem; font-weight: 600">Jumlah:</span>
+                <input
+                  type="number"
+                  class="prod-qty"
+                  data-price="150000"
+                  value="1"
+                  min="1"
+                />
+                <span style="font-size: 0.8rem; color: #64748b"
+                  >*Harga per batang: Rp 150.000</span
+                >
+              </div>
+              <input
+                type="text"
+                class="prod-note"
+                placeholder="Catatan tambahan"
+              />
+            </div>
+          </div>
+
+          <div class="cat-wrapper">
+            <label class="cat-header">
+              <input
+                type="checkbox"
+                class="cat-check"
+                value="Lampu Traffic Light"
+                data-target="cat-3"
+              />
+              3. Lampu Traffic Light
+            </label>
+            <div id="cat-3" class="cat-body hidden">
+              <div class="qty-group">
+                <span style="font-size: 0.9rem; font-weight: 600"
+                  >Jumlah Set:</span
+                >
+                <input
+                  type="number"
+                  class="prod-qty"
+                  data-price="2500000"
+                  value="1"
+                  min="1"
+                />
+                <span style="font-size: 0.8rem; color: #64748b"
+                  >*Harga per set: Rp 2.500.000</span
+                >
+              </div>
+              <input
+                type="text"
+                class="prod-note"
+                placeholder="Catatan tambahan"
+              />
+            </div>
+          </div>
+
+          <div class="cat-wrapper">
+            <label class="cat-header">
+              <input
+                type="checkbox"
+                class="cat-check"
+                value="Lampu Tenaga Surya"
+                data-target="cat-4"
+              />
+              4. Lampu Tenaga Surya
+            </label>
+            <div id="cat-4" class="cat-body hidden">
+              <div class="qty-group">
+                <span style="font-size: 0.9rem; font-weight: 600"
+                  >Jumlah Set:</span
+                >
+                <input
+                  type="number"
+                  class="prod-qty"
+                  data-price="3500000"
+                  value="1"
+                  min="1"
+                />
+                <span style="font-size: 0.8rem; color: #64748b"
+                  >*Harga per set: Rp 3.500.000</span
+                >
+              </div>
+              <input
+                type="text"
+                class="prod-note"
+                placeholder="Catatan tambahan"
+              />
+            </div>
+          </div>
+
+          <div class="cat-wrapper">
+            <label class="cat-header">
+              <input
+                type="checkbox"
+                class="cat-check"
+                value="Box Panel Custom"
+                data-target="cat-5"
+              />
+              5. Box Panel Custom
+            </label>
+            <div id="cat-5" class="cat-body hidden">
+              <p
+                style="
+                  color: #ea580c;
+                  font-size: 0.85rem;
+                  margin-bottom: 15px;
+                  font-weight: bold;
+                "
+              >
+                ⚠️ Harga produk custom akan dihitung sesuai kesepakatan penjual
+                dan pembeli.
+              </p>
+              <div class="dim-group">
+                <span style="font-size: 0.9rem; font-weight: 600"
+                  >Dimensi Custom (mm):</span
+                >
+                <div class="dimension-inputs">
+                  <input type="number" class="dim-p" placeholder="P" /> x
+                  <input type="number" class="dim-l" placeholder="L" /> x
+                  <input type="number" class="dim-t" placeholder="T" />
+                </div>
+              </div>
+              <div class="qty-group">
+                <span style="font-size: 0.9rem; font-weight: 600">Jumlah:</span>
+                <input
+                  type="number"
+                  class="prod-qty"
+                  data-price="0"
+                  value="1"
+                  min="1"
+                />
+              </div>
+              <textarea
+                class="prod-note"
+                style="height: 80px"
+                placeholder="Jelaskan secara detail spesifikasi custom Anda..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-step">
+          <h3>3. Metode Pembayaran</h3>
+          <div class="payment-methods">
+            <label
+              ><input type="radio" name="payment" value="Cash" checked /> Cash /
+              Tunai</label
+            >
+            <label
+              ><input type="radio" name="payment" value="Transfer Bank" />
+              Transfer Bank</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3
+            style="
+              margin-bottom: 15px;
+              border-bottom: 2px solid #f8fafc;
+              padding-bottom: 10px;
+            "
+          >
+            Ringkasan Pesanan
+          </h3>
+          <div id="summary-items" style="margin-bottom: 15px">
+            <p style="color: #94a3b8; font-size: 0.9rem">
+              Belum ada produk yang dipilih.
+            </p>
+          </div>
+          <hr
+            style="border: 0; border-top: 1px dashed #e2e8f0; margin: 15px 0"
+          />
+          <p id="summary-qty" style="font-size: 0.9rem; font-weight: 600">
+            Total Produk: 0 Item
+          </p>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 15px;
+            "
+          >
+            <span style="font-size: 1.1rem">Total Tagihan:</span>
+            <h2 id="grand-total" style="color: #7a29e0; font-size: 1.4rem">
+              Rp 0
+            </h2>
+          </div>
+          <p style="font-size: 0.75rem; color: #64748b; margin-top: 15px">
+            ℹ️ Pastikan data diri dan spesifikasi produk sudah benar sebelum
+            mengirim.
+          </p>
+          <button
+            onclick="sendToWhatsApp()"
+            class="btn-primary"
+            style="width: 100%; margin-top: 20px; border: none; cursor: pointer"
+          >
+            Kirim Pesanan Sekarang →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>UD MEKAR JAYA</h3>
+          <p>
+            Spesialis fabrikasi box panel listrik berkualitas tinggi dengan
+            standar Industri Internasional.
+          </p>
+        </div>
+        <div>
+          <h4>Layanan</h4>
+          <p>Custom Box Panel<br />Powder Coating<br />DLL</p>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <p>
+            📍 Jl. Ngingas Selatan RT.02 RW.01 (Belakang perumahan delta sari)
+            Waru, Sidoarjo, Jawa Timur<br />✉️ ud.mekarjaya141@gmail.com<br />
+            📞 +62 852-3459-9950
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 UD MEKAR JAYA. Seluruh Hak Cipta Dilindungi.</p>
+        <p>Kebijakan Privasi | Syarat & Ketentuan</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
